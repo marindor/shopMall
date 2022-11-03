@@ -16,6 +16,18 @@
        <put-attribute name="body" value="/WEB-INF/views/order/orderResult.jsp" />
     </definition>
     
+    <!-- 결제실패 페이지 설정 -->
+    <definition name="/order/orderResultFail" extends="baseLayout">
+       <put-attribute name="title" value="결제 실패 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/order/orderResultFail.jsp" />
+    </definition>
+    
+    <!-- 카카오결제 성공 페이지 설정 -->
+    <definition name="/order/payToOrderGoodsKakao" extends="baseLayout">
+       <put-attribute name="title" value="상품 주문 결과 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/order/orderResultKakao.jsp" />
+    </definition>
+    
 </tiles-definitions>
 
 

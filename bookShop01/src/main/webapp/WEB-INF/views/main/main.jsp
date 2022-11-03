@@ -7,7 +7,17 @@
 <%
   request.setCharacterEncoding("UTF-8");
 %>  
+<script type="text/javascript">
+	window.onload=function(){
+		const myTime = document.getElementById("timea")
+		alert(myTime)
+		setInterval(function(e){
+			myTime.innerText = new Date()
+		},1000)		
+	}
 
+</script>
+<p id="timea">aaffaa<p>
 <div id="ad_main_banner">
 	<ul class="bjqs">	 	
 	  <li><img width="775" height="145" src="${contextPath}/resources/image/main_banner01.jpg"></li>

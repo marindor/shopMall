@@ -2,6 +2,7 @@
 	pageEncoding="utf-8"
 	isELIgnored="false"%> 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
 </head>
 <BODY>
@@ -142,13 +143,26 @@
 				<TR class="dot_line">
 					<TD class="fixed_join">결제카드</TD>
 					<TD>
-					   ${myOrderInfo.card_com_name}
+					   <c:out value="${cardName}"/>
 				    </TD>
 				</TR>
 				<TR class="dot_line">
 					<TD class="fixed_join">할부기간</TD>
 					<TD>
 					   ${myOrderInfo.card_pay_month }
+				    </TD>
+				</TR>
+				<TR class="dot_line">
+					<TD class="fixed_join">카드승인번호</TD>
+					<TD>
+					   <c:out value="${authNumber}"/>
+				    </TD>
+				</TR>
+				<TR class="dot_line">
+					<TD class="fixed_join">승인시간</TD>
+					<TD>
+						<fmt:parseDate value="${authDateTime}" var="dateValue" pattern="yyyyMMddHHmmss"/>
+						<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd HH:mm:ss"/>
 				    </TD>
 				</TR>
 			</TBODY>

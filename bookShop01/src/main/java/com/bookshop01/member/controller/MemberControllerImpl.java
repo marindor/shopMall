@@ -52,7 +52,7 @@ public class MemberControllerImpl extends BaseController implements MemberContro
 			
 			
 		}else{
-			String message="¾ÆÀÌµğ³ª  ºñ¹Ğ¹øÈ£°¡ Æ²¸³´Ï´Ù. ´Ù½Ã ·Î±×ÀÎÇØÁÖ¼¼¿ä";
+			String message="ì•„ì´ë””ë‚˜ ì•”í˜¸ë¥¼ ë‹¤ì‹œ í™•ì¸í•´ì£¼ì„¸ìš”.";
 			mav.addObject("message", message);
 			mav.setViewName("/member/loginForm");
 		}
@@ -83,13 +83,13 @@ public class MemberControllerImpl extends BaseController implements MemberContro
 		try {
 		    memberService.addMember(_memberVO);
 		    message  = "<script>";
-		    message +=" alert('È¸¿ø °¡ÀÔÀ» ¸¶ÃÆ½À´Ï´Ù.·Î±×ÀÎÃ¢À¸·Î ÀÌµ¿ÇÕ´Ï´Ù.');";
+		    message +=" alert('íšŒì›ê°€ì… ì™„ë£Œ');";
 		    message += " location.href='"+request.getContextPath()+"/member/loginForm.do';";
 		    message += " </script>";
 		    
 		}catch(Exception e) {
 			message  = "<script>";
-		    message +=" alert('ÀÛ¾÷ Áß ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù. ´Ù½Ã ½ÃµµÇØ ÁÖ¼¼¿ä');";
+		    message +=" alert('ë¡œê·¸ì¸ ë˜ì–´ ìˆìŠµë‹ˆë‹¤.');";
 		    message += " location.href='"+request.getContextPath()+"/member/memberForm.do';";
 		    message += " </script>";
 			e.printStackTrace();

@@ -508,9 +508,9 @@ function fn_detail_search(){
 				</td>
 				<td width=50% align=left >
 				    <strong>주문자:${item.orderer_name}</strong><br>
-				  <strong>주문자 번화번호:${item.orderer_hp}</strong><br>
+				  <strong>주문자 전화번호:${item.orderer_hp}</strong><br>
 				  <strong>수령자:${item.receiver_name}</strong><br>
-				  <strong>수령자 번화번호:${item.receiver_hp1}-${item.receiver_hp2}-${item.receiver_hp3}</strong><br>
+				  <strong>수령자 전화번호:${item.receiver_hp1}-${item.receiver_hp2}-${item.receiver_hp3}</strong><br>
 				  <strong>주문상품명(수량):${item.goods_title}(${item.order_goods_qty})</strong><br>
 				     <c:forEach var="item2" items="${newOrderList}" varStatus="j">
 				       <c:if test="${j.index > i.index }" >
